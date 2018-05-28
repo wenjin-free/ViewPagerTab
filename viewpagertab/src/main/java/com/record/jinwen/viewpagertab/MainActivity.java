@@ -27,20 +27,12 @@ public class MainActivity extends AppCompatActivity implements ViewPager.OnPageC
         fragments.add(new Fragment1());
         fragments.add(new Fragment2());
         fragments.add(new Fragment3());
-        fragments.add(new Fragment3());
-        fragments.add(new Fragment1());
-        fragments.add(new Fragment2());
-        fragments.add(new Fragment3());
-        fragments.add(new Fragment3());
-        fragments.add(new Fragment1());
-        fragments.add(new Fragment2());
-        fragments.add(new Fragment3());
         MyPagerAdapter adapter = new MyPagerAdapter(getSupportFragmentManager(), fragments);
         //设定适配器
-        ViewPager vp = (ViewPager) findViewById(R.id.view_pager);
+        ViewPager vp = findViewById(R.id.view_pager);
         vp.addOnPageChangeListener(this);
         vp.setAdapter(adapter);
-        viewPagerTab = ((ViewPagerTab) findViewById(R.id.pager_tab));
+        viewPagerTab = findViewById(R.id.pager_tab);
         viewPagerTab.setViewPager(vp);
     }
 
